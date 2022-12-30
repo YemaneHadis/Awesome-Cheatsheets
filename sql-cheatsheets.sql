@@ -1,4 +1,6 @@
 -- @AUTHOR YEMANE HADIS  
+-- @ABOUT https://yemanehadis.github.io/portfolio/
+-- @LINKEDIN  https://www.linkedin.com/in/yemanehadis/
 -- ASUME WE HAVE THE FOLLOWING DATABASE  
 	-- SQL_STORE
 		-- CUSTOMERS
@@ -12,7 +14,7 @@
 		-- EMPLOYEES
         -- OFFICES
         
-use sql_store;
+USE sql_store;
 -- IN AND NOT IN OPRATOR 
 select * FROM Customers where state NOT IN ('VA', 'FL', 'GA');
 -- all custmer they have b  in the last name it may before or after 
@@ -155,6 +157,40 @@ UPDATE invoices
 set payment_total = 10
 
 
+
+
+-- GRANT 
+-- SQL GRANT USED TO PROVIDE PRIVILEGE TO DATABASE OBJECTS FOR A USER
+-- SYNTAX
+grant privilege_name on object_name
+to {user_name | public | role_name} 
+-- EXAMPLE 
+grant insert, 
+select on accounts to Ram
+
+-- REVOKE 
+-- WITHDRAW USER PRIVILEGES ON DATABASE OBJECT IF ANY GRANTED.
+--SYNTAX
+revoke privilege_name on object_name
+from {user_name | public | role_name}
+-- EXAMPLE 
+grant insert, 
+select on accounts to Ram
+
+
+-- TCL - TRANSACTION CONTROL LANGUAGES 
+	-- USED FOR MANAGING AND CONTROLLING THE TRANSACTIONS IN A DATABASE TO MAINTAIN 
+	-- CONSISTENCY  
+
+	-- COMMIT
+		-- HELPS USER TO SAVE A GIVEN TRANSACTION INTO THE DB PERMANENTLY
+
+	-- ROLLBACK 
+		-- IF, DUE TO SOME RESON COMMITED DATA IS INCORRECT WE CAN USE ROLL BACK TO
+		-- REVERSE CHANGE 
+
+	-- SAVEPOINT 
+		-- COMMAND HELPS IN SAVING A TRANSACTION TEMPORARILY SO THE USER CAN ROLLBACK
 
 
 
